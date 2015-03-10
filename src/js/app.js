@@ -1,6 +1,7 @@
 
 var React = require("react");
-var HomeComponents = require("home/homeComponents");
+var $ = require('jquery');
+var HomeComponents = React.createFactory(require("components/home"));
 
 var app = {
 
@@ -13,11 +14,11 @@ var app = {
 
         var mountNode = document.getElementById('reactAppContainer');
 
-        var mountComponent = HomeComponents.Home({
+        var mountComponent = HomeComponents({
             name: "Dear user!"
         });
 
-        React.renderComponent(mountComponent,mountNode);
+        React.render(mountComponent, mountNode);
 
         console.log("React should now be loaded");
     }
@@ -26,3 +27,6 @@ var app = {
 
 app.initialize();
 
+$(function(){
+  app.onDeviceReady();
+});

@@ -12,3 +12,4 @@ www
 
 .idea
 *.iml
+/tmp/
