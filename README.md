@@ -124,3 +124,11 @@ Some useful links to read:
 - Use watchify to make the build faster
 - Fail safe on Recess error
 - Perhaps add some default phonegap plugins or config (I'm not an expert)
+
+
+cordova platforms add ios
+npm install -g ios-sim
+
+cordova plugin add org.apache.cordova.console
+
+cordova run --debug --emulator ios
